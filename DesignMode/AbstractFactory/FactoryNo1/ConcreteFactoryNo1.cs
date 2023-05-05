@@ -1,6 +1,6 @@
 ﻿using System.Data.Common;
 
-namespace DesignMode.AbstractFactory
+namespace DesignMode.AbstractFactory.FactoryNo1
 {
     public class ConcreteFactoryNo1 : AbstractFactory
     {

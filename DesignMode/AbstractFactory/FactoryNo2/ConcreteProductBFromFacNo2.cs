@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignMode.AbstractFactory
+namespace DesignMode.AbstractFactory.FactoryNo2
 {
-    public class ConcreteProductAFromFacNo1 : AbstractProductA
+    public class ConcreteProductBFromFacNo2 : AbstractProductB
     {
         public override void ShowName()
         {
-            Console.WriteLine("This is a ProductA from Factory No.1");
+            Console.WriteLine("This is a ProductB from Factory No.2");
         }
     }
 }

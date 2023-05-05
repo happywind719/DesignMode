@@ -1,4 +1,7 @@
-﻿using DesignMode.FactoryMethod;
+﻿using DesignMode.AbstractFactory;
+using DesignMode.AbstractFactory.FactoryNo1;
+using DesignMode.AbstractFactory.FactoryNo2;
+using DesignMode.FactoryMethod;
 using DesignMode.SimpleFactory;
 using DesignMode.Singleton;
 
@@ -36,20 +39,34 @@ using DesignMode.Singleton;
 #endregion
 
 #region 工厂方法模式
-var plus = new PlusFactory().CreateSum();
-plus.A = 10;
-plus.B = 5;
-Console.WriteLine(plus.GetResult());
+//var plus = new PlusFactory().CreateSum();
+//plus.A = 10;
+//plus.B = 5;
+//Console.WriteLine(plus.GetResult());
 
-var minus = new MinusFactory().CreateSum();
-minus.A = 10;
-minus.B = 5;
-Console.WriteLine(minus.GetResult());
+//var minus = new MinusFactory().CreateSum();
+//minus.A = 10;
+//minus.B = 5;
+//Console.WriteLine(minus.GetResult());
 
-var multiply = new MultiplyFactory().CreateSum();
-multiply.A = 10;
-multiply.B = 5;
-Console.WriteLine(multiply.GetResult());
+//var multiply = new MultiplyFactory().CreateSum();
+//multiply.A = 10;
+//multiply.B = 5;
+//Console.WriteLine(multiply.GetResult());
 #endregion
 
+
+#region 抽象工厂模式
+AbstractFactory factoryNo1 = new ConcreteFactoryNo1(); 
+var productAFromFacNo1 =  factoryNo1.CreateProductA();
+productAFromFacNo1.ShowName();
+var productBFromFacNo1 = factoryNo1.CreateProductB();
+productBFromFacNo1.ShowName();
+
+AbstractFactory factoyrNo2 = new ConcreteFactoryNo2();
+var productAFromFacNo2 = factoyrNo2.CreateProductA();
+productAFromFacNo2.ShowName();
+var productBFromFacNo2 = factoyrNo2.CreateProductB();
+productBFromFacNo2.ShowName();
+#endregion
 #endregion
