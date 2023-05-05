@@ -1,4 +1,5 @@
-﻿using DesignMode.SimpleFactory;
+﻿using DesignMode.FactoryMethod;
+using DesignMode.SimpleFactory;
 using DesignMode.Singleton;
 
 #region 创建型模式
@@ -32,6 +33,23 @@ using DesignMode.Singleton;
 //sum1.A = 10;
 //sum1.B = 5;
 //Console.WriteLine(sum1.GetResult());
+#endregion
+
+#region 工厂方法模式
+var plus = new PlusFactory().CreateSum();
+plus.A = 10;
+plus.B = 5;
+Console.WriteLine(plus.GetResult());
+
+var minus = new MinusFactory().CreateSum();
+minus.A = 10;
+minus.B = 5;
+Console.WriteLine(minus.GetResult());
+
+var multiply = new MultiplyFactory().CreateSum();
+multiply.A = 10;
+multiply.B = 5;
+Console.WriteLine(multiply.GetResult());
 #endregion
 
 #endregion
